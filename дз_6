@@ -1,0 +1,24 @@
+result = []
+def divider(a, b):
+    if (type(a) == str):
+        raise TypeError("написано 'a' не цифрами")
+    elif (type(b) == str):
+        raise TypeError("написано 'b' не цифрами")
+    elif b==0:
+        raise ZeroDivisionError("'b' не может быть ноль")
+    elif a < b and b > 100:
+        raise ValueError("a<b and b > 100")
+    elif a < b:
+        raise ValueError ("a < b")
+    elif b > 100:
+        raise IndexError ("b > 100")
+    #else:
+        #raise TypeError("q")
+    return a/b
+
+data = {10: 2, 12: 5, 8:4, 18: 1, 30: 15, 7: 4}
+for key in data:
+     res = divider(key, data[key])
+     result.append(res)
+
+print(result)
